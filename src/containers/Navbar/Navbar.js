@@ -1,11 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import classes from "./Navbar.module.css";
+import { useSpring, animated, config } from "react-spring";
 
 const Navbar = (props) => {
+  const showup = useSpring({
+    from: {
+      transform: "translateY(-30%)",
+    },
+    transform: "translateY(0)",
+    config: config.molasses,
+  });
+
   return (
-    <div className={classes.Navbar}>
-      <div className={classes.container}>
+    <animated.div style={showup} className={classes.Navbar}>
+      <div className={[classes.container, "container"].join(" ")}>
         <Link className={classes.logo} to="/">
           <img src="images/logo.png" alt="logo" />
         </Link>
@@ -18,7 +27,7 @@ const Navbar = (props) => {
           </Link>
         </div>
       </div>
-    </div>
+    </animated.div>
   );
 };
 

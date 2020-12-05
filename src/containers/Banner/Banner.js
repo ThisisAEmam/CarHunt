@@ -14,8 +14,13 @@ const Banner = (props) => {
   return (
     <animated.div style={showup} className={classes.Banner}>
       <div className={classes.bg}>
-        <img className={classes.BannerImg} src="/images/bg3.jpg" alt="bg" />
+        <img className={classes.BannerImg} src="/images/background.jpg" alt="bg" />
         <div className={classes.overlay}></div>
+      </div>
+      <div className={classes.textContainer}>
+        <div className="container">
+          <p className={classes.bannerText}>Use the power of AI to get reviews of your car with a single click.</p>
+        </div>
       </div>
     </animated.div>
   );

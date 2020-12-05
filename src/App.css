@@ -16,7 +16,25 @@ code {
 }
 
 :root {
-  --primary: #4eab6b;
+  --primary: #045de9;
+  --white: #f0f0f0;
+}
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary-dark);
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
 }
 
 @media (min-width: 767px) and (max-width: 1367px) {
