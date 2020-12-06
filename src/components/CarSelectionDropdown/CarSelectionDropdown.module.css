@@ -1,0 +1,43 @@
+.CarSelectionDropdown {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  margin-right: 1.25rem;
+  border: 1px solid #e7e7e7;
+  background-color: #fafafa;
+  font-size: 1rem;
+  border-radius: 2px;
+  border-width: 2px;
+  outline: none;
+  color: #aaa;
+  font-weight: 600;
+}
+
+.CarSelectionDropdown::after {
+  content: "";
+  width: 0.8em;
+  height: 0.5em;
+  background-color: var(--primary);
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+}
+
+.CarSelectionDropdown.selected {
+  color: #222;
+}
+
+.CarSelectionDropdown option {
+  font-weight: 600;
+  padding: 0.25rem 0;
+  color: #222;
+}
+
+.CarSelectionDropdown option:focus,
+.CarSelectionDropdown option:active,
+.CarSelectionDropdown option:hover {
+  background-color: var(--secondary);
+  color: #fff;
+}
+
+/* 
+.defaultOption {
+  color: #ddd;
+} */
