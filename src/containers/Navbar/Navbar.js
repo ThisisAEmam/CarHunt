@@ -16,7 +16,7 @@ const Navbar = (props) => {
     <animated.div style={showup} className={classes.Navbar}>
       <div className={[classes.container, "container"].join(" ")}>
         <Link className={classes.logo} to="/">
-          <img src="images/logo with text.png" alt="logo" />
+          <img src="images/logo with text 2.png" alt="logo" />
         </Link>
         <div className={classes.navlinks}>
           <Link className={[classes.navlink, classes.login].join(" ")} to="/login">

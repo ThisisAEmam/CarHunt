@@ -1,4 +1,5 @@
 .Banner {
+  margin-top: 5rem;
   height: 70vh;
   width: 100vw;
   background: #ddd;
@@ -27,8 +28,10 @@
   background-image: linear-gradient(315deg, #734ae8 0%, #89d4cf 74%);
   background: linear-gradient(to right, #4e88d4 0%, #4a4cbf 100%);
   background: linear-gradient(to bottom right, var(--secondary) 0%, var(--primary) 100%);
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
   /* background: linear-gradient(to bottom right, #b64343 0%, #9d3939 100%); */
-  opacity: 0.85;
+  opacity: 0.8;
 }
 
 .textContainer {
