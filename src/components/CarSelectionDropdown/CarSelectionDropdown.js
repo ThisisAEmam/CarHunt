@@ -18,7 +18,7 @@ const CarSelectionDropdown = (props) => {
 
   useEffect(() => {
     if (props.data.length !== 0) {
-      if (type === "manufacturer") {
+      if (type === "brand") {
         const temp = [];
         props.data.map((item) => {
           if (!temp.includes(item.Make)) {
@@ -26,23 +26,25 @@ const CarSelectionDropdown = (props) => {
           }
           return 0;
         });
+        temp.sort();
         setData([...temp]);
       } else if (type === "model") {
         const temp = [];
-        if (carSelected.manufacturer !== "None") {
-          const modelsTemp = props.data.filter((item) => item.Make === carSelected.manufacturer);
+        if (carSelected.brand !== "None") {
+          const modelsTemp = props.data.filter((item) => item.Make === carSelected.brand);
           modelsTemp.map((item) => {
             if (!temp.includes(item.Model)) {
               temp.push(item.Model);
             }
             return 0;
           });
+          temp.sort();
           setData([...temp]);
         }
       } else if (type === "year") {
         const temp = [];
-        if (carSelected.manufacturer !== "None" && carSelected.model !== "None") {
-          const yearsTemp = props.data.filter((item) => item.Make === carSelected.manufacturer && item.Model === carSelected.model);
+        if (carSelected.brand !== "None" && carSelected.model !== "None") {
+          const yearsTemp = props.data.filter((item) => item.Make === carSelected.brand && item.Model === carSelected.model);
           yearsTemp.map((item) => {
             if (!temp.includes(item.Year)) {
               temp.push(item.Year);
@@ -67,8 +69,8 @@ const CarSelectionDropdown = (props) => {
     const temp = { ...carSelected };
     if (value !== "None") {
       setSelected(true);
-      if (type === "manufacturer") {
-        temp.manufacturer = value;
+      if (type === "brand") {
+        temp.brand = value;
       } else if (type === "model") {
         temp.model = value;
       } else {
@@ -78,8 +80,8 @@ const CarSelectionDropdown = (props) => {
       dispatch(setCarSelected(temp));
     } else {
       setSelected(false);
-      if (type === "manufacturer") {
-        temp.manufacturer = value;
+      if (type === "brand") {
+        temp.brand = value;
       } else if (type === "model") {
         temp.model = value;
       } else {
@@ -93,7 +95,7 @@ const CarSelectionDropdown = (props) => {
   return (
     <select className={[classes.CarSelectionDropdown, selected ? classes.selected : null].join(" ")} onChange={selectHandler}>
       <option className={classes.defaultOption} value="None" defaultValue>
-        {type === "manufacturer" ? "Select a Manufacturer" : type === "model" ? "Select a Model" : type === "year" ? "Select a Year" : ""}
+        {type === "brand" ? "Select a Brand" : type === "model" ? "Select a Model" : type === "year" ? "Select a Year" : ""}
       </option>
       {data.map((item, index) => (
         <option key={index} value={item}>

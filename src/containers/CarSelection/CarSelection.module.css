@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 50rem;
 }
 
 .title {
@@ -28,8 +27,14 @@
   cursor: pointer;
   transition: all 0.25s ease;
   border-radius: 2px;
+  outline: none;
 }
 
-.startBtn:hover {
+.startBtn.disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.startBtn:not(.disabled):hover {
   opacity: 0.9;
 }

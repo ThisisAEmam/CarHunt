@@ -1,0 +1,23 @@
+.CarsLogos {
+  padding: 5rem;
+}
+
+.images {
+  width: 100%;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: auto auto auto auto auto auto;
+  row-gap: 3rem;
+}
+
+.imageContainer {
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageContainer img {
+  width: 100%;
+}
