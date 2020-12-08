@@ -1,6 +1,6 @@
 .CarSelection {
   padding: 3rem 0;
-  background-color: #efefef;
+  background-color: #f8f8f8;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,4 +37,15 @@
 
 .startBtn:not(.disabled):hover {
   opacity: 0.9;
+}
+
+.noteText {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 2rem;
+  text-align: right;
+}
+
+.noteText span {
+  color: var(--primary);
 }

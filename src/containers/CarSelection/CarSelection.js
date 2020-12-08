@@ -94,6 +94,9 @@ const CarSelection = (props) => {
             Start Reviewing
           </button>
         </div>
+        <p className={classes.noteText}>
+          <span>Note: </span>We consider adding unavailable cars as soon as possible.
+        </p>
       </div>
     </animated.div>
   );

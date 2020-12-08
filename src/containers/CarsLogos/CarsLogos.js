@@ -2,7 +2,29 @@ import React from "react";
 import classes from "./CarsLogos.module.css";
 
 const CarsLogos = (props) => {
-  const names = ["audi", "bmw", "mercedes", "ford", "honda", "jeep", "mazda", "mini", "nissan", "opel", "peugeot", "renault", "skoda", "toyota", "volvo"];
+  const names = [
+    "audi",
+    "bmw",
+    "mercedes",
+    "ford",
+    "dodge",
+    "jeep",
+    "mini",
+    "ferrari",
+    "tesla",
+    "opel",
+    "volvo",
+    "honda",
+    "mazda",
+    "nissan",
+    "peugeot",
+    "hyundai",
+    "toyota",
+    "fiat",
+    "сhevrolet",
+    "suzuki",
+    "volkswagen",
+  ];
   return (
     <div className={classes.CarsLogos}>
       <div className="container">

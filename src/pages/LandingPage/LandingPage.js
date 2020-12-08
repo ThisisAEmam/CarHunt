@@ -6,6 +6,7 @@ import Navbar from "../../containers/Navbar/Navbar";
 import FetchingLoader from "../../hoc/FetchingLoader/FetchingLoader";
 import classes from "./LandingPage.module.css";
 import { useSelector } from "react-redux";
+import Footer from "../../containers/Footer/Footer";
 
 const LandingPage = (props) => {
   const { isFetchingLoaderShown } = useSelector((state) => state);
@@ -18,6 +19,7 @@ const LandingPage = (props) => {
           <Banner />
           <CarSelection />
           <CarsLogos />
+          <Footer />
         </div>
       ) : (
         <FetchingLoader />

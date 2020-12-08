@@ -1,18 +1,19 @@
 .CarsLogos {
   padding: 5rem;
+  background-color: var(--white);
 }
 
 .images {
   width: 100%;
   display: grid;
   justify-content: space-between;
-  grid-template-columns: auto auto auto auto auto auto;
-  row-gap: 3rem;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  row-gap: 2rem;
 }
 
 .imageContainer {
-  width: 6rem;
-  height: 6rem;
+  width: 5rem;
+  height: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
